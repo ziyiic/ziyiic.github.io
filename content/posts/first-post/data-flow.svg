@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" role="img" aria-labelledby="title desc">
+  <title id="title">机器人控制数据流</title>
+  <desc id="desc">上位机经过串口与协议解析产生安全控制命令，经电机控制执行，再通过 CAN 反馈与状态回传返回上位机。</desc>
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="20" y="25" width="190" height="60" rx="8"/>
+    <rect x="265" y="25" width="190" height="60" rx="8"/>
+    <rect x="510" y="25" width="190" height="60" rx="8"/>
+    <rect x="20" y="165" width="190" height="60" rx="8"/>
+    <rect x="265" y="165" width="190" height="60" rx="8"/>
+    <rect x="510" y="165" width="190" height="60" rx="8"/>
+    <path d="M210 55h55m-10-6 10 6-10 6M455 55h55m-10-6 10 6-10 6M605 85v80m-6-10 6 10 6-10M510 195h-55m10-6-10 6 10 6M265 195h-55m10-6-10 6 10 6M115 165V85m-6 10 6-10 6 10"/>
+  </g>
+  <g fill="currentColor" text-anchor="middle" font-family="sans-serif" font-size="19">
+    <text x="115" y="62">上位机命令</text>
+    <text x="360" y="62">串口 DMA / 协议</text>
+    <text x="605" y="62">安全状态 / 目标</text>
+    <text x="605" y="202">电机控制</text>
+    <text x="360" y="202">CAN 反馈</text>
+    <text x="115" y="202">状态回传</text>
+  </g>
+</svg>

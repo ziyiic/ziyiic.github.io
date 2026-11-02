@@ -1,0 +1,3 @@
+[data-theme="dark"] .post-content img[src$="data-flow.svg"] {
+  filter: invert(1);
+}

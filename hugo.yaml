@@ -1,0 +1,45 @@
+baseURL: "https://ziyiic.github.io/"
+locale: "zh-CN"
+defaultContentLanguage: "zh"
+title: "知行笔记"
+theme: "PaperMod"
+hasCJKLanguage: true
+enableRobotsTXT: true
+timeZone: "Asia/Shanghai"
+
+pagination:
+  pagerSize: 10
+
+params:
+  description: "记录嵌入式、机器人与工程实践：从理解原理到验证结果。"
+  mainSections: ["posts"]
+  defaultTheme: auto
+  DateFormat: "2006-01-02"
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowToc: true
+  homeInfoParams:
+    Title: "把做过的事，变成理解过的知识。"
+    Content: "记录 STM32、RTOS、通信协议与机器人控制。写清问题、设计与验证，也如实保留尚未解决的部分。"
+
+menu:
+  main:
+    - name: "文章"
+      url: "/posts/"
+      weight: 10
+    - name: "分类"
+      url: "/categories/"
+      weight: 20
+    - name: "关于"
+      url: "/about/"
+      weight: 30
+
+markup:
+  highlight:
+    noClasses: false
+
+caches:
+  images:
+    dir: ":cacheDir/images"
