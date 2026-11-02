@@ -4,9 +4,12 @@ Hugo + PaperMod 静态博客。正式地址：https://ziyiic.github.io/
 
 ## 本地预览（当前电脑）
 
-在本目录打开 PowerShell：
+本机项目目录为 `D:\Blog\UserCode\my-blog`，Hugo 工具保存在相邻的 `D:\Blog\UserCode\.tools\hugo`。项目和工具已一起从原会话目录迁移，线上地址不变。
+
+打开 PowerShell 后执行：
 
 ```powershell
+Set-Location 'D:\Blog\UserCode\my-blog'
 & '..\.tools\hugo\hugo.exe' server
 ```
 
@@ -35,6 +38,14 @@ hugo server
 编辑 `content/posts/my-topic/index.md`。文章顶部使用 YAML 元信息，发布前将 `draft` 改为 `false`，日期不要晚于当前时间。图片放在文章旁边，以 `![说明](图片名.png)` 引用。文件保存为 UTF-8。
 
 `content/about.md` 为关于页，`hugo.yaml` 为网站配置。不要直接修改主题，定制样式放在 `assets/css/extended/`。
+
+### 代码外观
+
+代码采用自托管的 JetBrains Mono（常规、粗体）与 Monokai 高亮，字体不依赖第三方 CDN。中文依次回退到本机的 Noto Sans Mono CJK SC、更纱黑体、微软雅黑或系统等宽字体；不同设备的中文外观可能不同。代码字号 15px、行高 1.8，关闭编程连字，中文注释取消斜体并提高对比度。明暗页面均保留 Monokai 深色代码块，手机长行在代码块内横向滚动。
+
+字体与许可保存在 `static/fonts/jetbrains-mono/`，上游为 https://github.com/JetBrains/JetBrainsMono ，遵循 SIL Open Font License。字体、间距及注释调整见 `assets/css/extended/blog.css`。
+
+`assets/css/includes/chroma-styles.css` 覆盖主题自带色表，使用 `hugo gen chromastyles --style=monokai` 生成；保持 `markup.highlight.noClasses: false`，无需修改主题子模块。
 
 ## 发布与验收
 

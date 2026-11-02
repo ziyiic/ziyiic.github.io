@@ -1,3 +1,52 @@
 [data-theme="dark"] .post-content img[src$="data-flow.svg"] {
   filter: invert(1);
 }
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.post-content code {
+  font-family: "JetBrains Mono", "Noto Sans Mono CJK SC", "Sarasa Mono SC", "Microsoft YaHei", monospace;
+  font-size: 0.88em;
+  font-variant-ligatures: none;
+}
+
+.post-content .highlight,
+.post-content pre {
+  --code-block-bg: #272822;
+}
+
+.post-content pre code {
+  color: #f8f8f2;
+  font-size: 15px;
+  line-height: 1.8;
+  tab-size: 4;
+  word-break: normal;
+}
+
+.post-content .highlight pre.chroma code {
+  padding: 16px 0;
+}
+
+.post-content .highlight pre.chroma .line .cl {
+  padding: 0 18px;
+}
+
+/* Keep Chinese comments upright and readable against the Monokai background. */
+.chroma :is(.c, .ch, .cm, .c1, .cs, .cp, .cpf) {
+  color: #a6a18b;
+  font-style: normal;
+}
